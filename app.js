@@ -74,7 +74,7 @@
             console.log("There are no cards in the deck.");
         }
     }
-        /*****      Play cards per turn (1)         *****/
+        /*****    Play cards per turn (1)     *****/
     function play(playerIndex){
         if(players[playerIndex].hand.length >= 1){
             let cardToPlay = players[playerIndex].hand.shift();
@@ -83,7 +83,7 @@
             console.log("There are no cards in your hand.");
         }
     }
-        /*****      Validate if the player's table meets the winning criteria (goal)         *****/
+        /*****   Validate if the player's table meets the winning criteria (goal)     *****/
     function validate(playerIndex){
         let result = goal.every(number => {
             return players[playerIndex].table.includes(number)
@@ -92,7 +92,7 @@
     }
     
     
-    /*****      GAME LOGIC (Function to play the game using the previously declared functions)       *****/
+    /*****      GAME LOGIC (Function to play the game using the previously declared functions)    *****/
     function playGame(){
         let turn = 0
         shuffle();
@@ -125,5 +125,5 @@
             }
         }
     }
-    /*****      Run the game         *****/
+    /*****   Run the game   *****/
     playGame();
